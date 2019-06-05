@@ -48,7 +48,6 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
   - assets/banking.png
-  - assets/Banner_PhonePe.png
   - assets/ic_menu_balance_selected.png
   - assets/ic_menu_invite.png
   - assets/ic_menu_receive_selected.png
@@ -82,6 +81,10 @@ flutter:
   - assets/rupee.png
   - assets/newgiftcard.png
   - assets/right-arrow.png
+  - assets/banner7.png
+
+
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

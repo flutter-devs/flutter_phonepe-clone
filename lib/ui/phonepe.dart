@@ -98,6 +98,7 @@ class _PhonePeState extends State<PhonePe> {
   Widget _bottemTab() {
     return new BottomNavigationBar(
         currentIndex: 0,
+        selectedItemColor: Colors.deepPurple,
         type: BottomNavigationBarType.fixed,
         items: [
           new BottomNavigationBarItem(
@@ -190,7 +191,7 @@ class _PhonePeState extends State<PhonePe> {
             child: Stack(
           children: <Widget>[
             Container(
-              height: 140,
+              height: MediaQuery.of(context).size.width/3.0,
               width: MediaQuery.of(context).size.width,
               child: Container(
                 child: Padding(
@@ -247,7 +248,6 @@ class _PhonePeState extends State<PhonePe> {
               padding: const EdgeInsets.only(left: 8),
               child: Container(
                 height: 85,
-
                 child: GridView.builder(
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 1),
@@ -257,15 +257,13 @@ class _PhonePeState extends State<PhonePe> {
                     itemBuilder: (context, index) {
                       return MoneyTransfer(_getMoneyTransferList()[index]);
                     }),
-
               ),
             ),
-
           ],
         )),
         SliverToBoxAdapter(
           child: Padding(
-            padding: const EdgeInsets.only(left: 20, right: 20,top: 0),
+            padding: const EdgeInsets.only(left: 20, right: 20, top: 0),
             child: Divider(
               color: Colors.grey[700],
               height: 1,
@@ -274,10 +272,12 @@ class _PhonePeState extends State<PhonePe> {
         ),
         SliverToBoxAdapter(
           child: Padding(
-            padding: const EdgeInsets.only(left: 9, top: 15, ),
+            padding: const EdgeInsets.only(
+              left: 9,
+              top: 15,
+            ),
             child: Container(
               height: 90,
-
               child: GridView.builder(
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 1),
@@ -464,8 +464,8 @@ class _PhonePeState extends State<PhonePe> {
 
   List<ImageSliderModel> _getImageSliderList() {
     List<ImageSliderModel> list = new List();
-    list.add(new ImageSliderModel("assets/Banner_PhonePe.png"));
-    list.add(new ImageSliderModel("assets/Banner_PhonePe.png"));
+    list.add(new ImageSliderModel("assets/banner7.png"));
+    list.add(new ImageSliderModel("assets/banner7.png"));
 
     return list;
   }
@@ -510,21 +510,27 @@ class _PhonePeState extends State<PhonePe> {
 
   Widget imageSliderItem(ImageSliderModel i) {
     return Container(
+
         padding: EdgeInsets.only(left: 8, right: 8),
-        decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10), color: Colors.white),
+        width: MediaQuery.of(context).size.width / 1.05,
         child: ClipRRect(
+          clipBehavior: Clip.antiAlias,
           borderRadius: BorderRadius.circular(10),
           child: Image.asset(
             i.path,
-            fit: BoxFit.cover,
+fit: BoxFit.fill,
+
+
+//            width: MediaQuery.of(context).size.width/4,
+//            height: MediaQuery.of(context).size.height,
           ),
         ));
   }
 
   Color dotColor(int index) {
-    return _currentIndex == index ? Colors.white : Colors.yellow;
+    return _currentIndex == index ? Colors.grey : Colors.black;
   }
 }
 
