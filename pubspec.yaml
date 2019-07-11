@@ -23,7 +23,7 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
-  image_picker: "^0.4.5"
+  image_picker:
   carousel_slider: any
   url_launcher: ^5.0.2
   intl: ^0.15.7
@@ -81,7 +81,7 @@ flutter:
   - assets/rupee.png
   - assets/newgiftcard.png
   - assets/right-arrow.png
-  - assets/banner7.png
+  - assets/ghghgh.jpg
 
 
 

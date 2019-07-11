@@ -3,12 +3,12 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter_phonepe_ui/model/ImageSliderModel.dart';
 import 'package:flutter_phonepe_ui/model/Listpaymodel.dart';
 
-class PhonePe extends StatefulWidget {
+class FlutterDevs extends StatefulWidget {
   @override
-  _PhonePeState createState() => _PhonePeState();
+  _FlutterDevsState createState() => _FlutterDevsState();
 }
 
-class _PhonePeState extends State<PhonePe> {
+class _FlutterDevsState extends State<FlutterDevs> {
   int _currentIndex = 0;
 
   @override
@@ -156,7 +156,7 @@ class _PhonePeState extends State<PhonePe> {
             child: Padding(
               padding: const EdgeInsets.only(left: 13, top: 13, bottom: 8),
               child: Text(
-                'Make the most of your PhonePe account',
+                'Make the most of your Flutter Devs account',
                 style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.bold),
               ),
             ),
@@ -464,8 +464,9 @@ class _PhonePeState extends State<PhonePe> {
 
   List<ImageSliderModel> _getImageSliderList() {
     List<ImageSliderModel> list = new List();
-    list.add(new ImageSliderModel("assets/banner7.png"));
-    list.add(new ImageSliderModel("assets/banner7.png"));
+    list.add(new ImageSliderModel("assets/ghghgh.jpg"));
+    list.add(new ImageSliderModel("assets/ghghgh.jpg"));
+
 
     return list;
   }
